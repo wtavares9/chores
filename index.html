@@ -5,23 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chore List</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const checkboxes = document.querySelectorAll("input[type='checkbox']");
-
-            checkboxes.forEach(checkbox => {
-                const id = checkbox.id;
-                const savedState = localStorage.getItem(id);
-                if (savedState) {
-                    checkbox.checked = savedState === "true";
-                }
-
-                checkbox.addEventListener("change", function() {
-                    localStorage.setItem(id, checkbox.checked);
-                });
-            });
-        });
-    </script>
 </head>
 <body>
     <div class="container">
@@ -42,163 +25,410 @@
                 <tr>
                     <td>Monday</td>
                     <td>
-                        <!-- Keira -->
-                        <input type="checkbox" id="keira-mon-1"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
-                        <input type="checkbox" id="keira-mon-2"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
-                        <input type="checkbox" id="keira-mon-3"> CLEAN ROOM
+                        <!--Keira-->
+                        <input type="checkbox"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
+                        <input type="checkbox"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
+                        <input type="checkbox"> CLEAN ROOM
                     </td>
-                    <!-- Kim -->
-                    <td>
-                        <input type="checkbox" id="kim-mon-1"> DISHES<br>
-                        <input type="checkbox" id="kim-mon-2"> CLEAN DINING TABLE<br>
-                        <input type="checkbox" id="kim-mon-3"> KITCHEN TRASH<br>
-                        <input type="checkbox" id="kim-mon-4"> KITCHEN COUNTERTOPS<br>
-                        <input type="checkbox" id="kim-mon-5"> CLEAN ROOM
-                    </td>
-                    <!-- Khloe -->
-                    <td>
-                        <input type="checkbox" id="khloe-mon-1"> CLEAN BATHROOM<br>
-                        <input type="checkbox" id="khloe-mon-2"> DUST HOUSE<br>
-                        <input type="checkbox" id="khloe-mon-3"> SWEEP DECK AND OUTSIDE WALKWAY<br>
-                        <input type="checkbox" id="khloe-mon-4"> CLEAN ROOM
-                    </td>
-                    <!-- Karissa -->
-                    <td>
-                        <input type="checkbox" id="karissa-mon-1"> FEED & WATER CHICKENS<br>
-                        <input type="checkbox" id="karissa-mon-2"> FEED & WATER DOGS<br>
-                        <input type="checkbox" id="karissa-mon-3"> CLEAN ROOM
-                    </td>
+                    <!--Kim-->
+                    <td><input type="checkbox"> DISHES<br>
+                        <input type="checkbox"> CLEAN DINING TABLE<br>
+                        <input type="checkbox"> KITCHEN TRASH<br>
+                        <input type="checkbox"> KITCHEN COUNTERTOPS<br>
+                        <input type="checkbox"> CLEAN ROOM</td>
+                        <!--Khloe-->
+                    <td><input type="checkbox"> CLEAN BATHROOM<br>
+                        <input type="checkbox"> DUST HOUSE<br>
+                        <input type="checkbox"> SWEEP DECK AND OUTSIDE WALKWAY<br>
+                        <input type="checkbox"> CLEAN ROOM</td>
+                        <!--Karissa-->
+                    <td><input type="checkbox"> FEED & WATER CHICKENS<br>
+                        <input type="checkbox"> FEED & WATER DOGS<br>
+                        <input type="checkbox"> CLEAN ROOM</td>
                 </tr>
-                <!-- Additional rows for Tuesday to Friday with unique IDs for each checkbox -->
-                <!-- Tuesday -->
+                <!-- Additional rows for Tuesday to Friday -->
+                  <!-- Tuesday -->
                 <tr>
                     <td>Tuesday</td>
                     <td>
-                        <!-- Keira -->
-                        <input type="checkbox" id="keira-tue-1"> DISHES<br>
-                        <input type="checkbox" id="keira-tue-2"> CLEAN DINING TABLE<br>
-                        <input type="checkbox" id="keira-tue-3"> KITCHEN TRASH<br>
-                        <input type="checkbox" id="keira-tue-4"> KITCHEN COUNTERTOPS<br>
-                        <input type="checkbox" id="keira-tue-5"> CLEAN ROOM
+                        <!--Keira-->
+                        <input type="checkbox"> DISHES<br>
+                            <input type="checkbox"> CLEAN DINING TABLE<br>
+                            <input type="checkbox"> KITCHEN TRASH<br>
+                            <input type="checkbox"> KITCHEN COUNTERTOPS<br>
+                            <input type="checkbox"> CLEAN ROOM</td>
                     </td>
-                    <!-- Kim -->
-                    <td>
-                        <input type="checkbox" id="kim-tue-1"> CLEAN BATHROOM<br>
-                        <input type="checkbox" id="kim-tue-2"> DUST HOUSE<br>
-                        <input type="checkbox" id="kim-tue-3"> SWEEP DECK AND OUTSIDE WALKWAY<br>
-                        <input type="checkbox" id="kim-tue-4"> CLEAN ROOM
-                    </td>
-                    <!-- Khloe -->
-                    <td>
-                        <input type="checkbox" id="khloe-tue-1"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
-                        <input type="checkbox" id="khloe-tue-2"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
-                        <input type="checkbox" id="khloe-tue-3"> CLEAN ROOM
-                    </td>
-                    <!-- Karissa -->
-                    <td>
-                        <input type="checkbox" id="karissa-tue-1"> FEED & WATER CHICKENS<br>
-                        <input type="checkbox" id="karissa-tue-2"> FEED & WATER DOGS<br>
-                        <input type="checkbox" id="karissa-tue-3"> CLEAN ROOM
-                    </td>
+                    <!--Kim-->
+                    <td><input type="checkbox"> CLEAN BATHROOM<br>
+                        <input type="checkbox"> DUST HOUSE<br>
+                        <input type="checkbox"> SWEEP DECK AND OUTSIDE WALKWAY<br>
+                        <input type="checkbox"> CLEAN ROOM</td>
+                        <!--Khloe-->
+                    <td><input type="checkbox"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
+                        <input type="checkbox"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
+                        <input type="checkbox"> CLEAN ROOM
+                        <!--Karissa-->
+                    <td><input type="checkbox"> FEED & WATER CHICKENS<br>
+                        <input type="checkbox"> FEED & WATER DOGS<br>
+                        <input type="checkbox"> CLEAN ROOM</td>
                 </tr>
-                <!-- Additional rows for Wednesday, Thursday, Friday... -->
-                <!-- Wednesday -->
+                <!-- Wednesday-->
                 <tr>
                     <td>Wednesday</td>
                     <td>
-                        <!-- Keira -->
-                        <input type="checkbox" id="keira-wed-1"> CLEAN BATHROOM<br>
-                        <input type="checkbox" id="keira-wed-2"> DUST HOUSE<br>
-                        <input type="checkbox" id="keira-wed-3"> SWEEP DECK AND OUTSIDE WALKWAY<br>
-                        <input type="checkbox" id="keira-wed-4"> CLEAN ROOM
+                        <!--Keira-->
+                        <input type="checkbox"> CLEAN BATHROOM<br>
+                            <input type="checkbox"> DUST HOUSE<br>
+                            <input type="checkbox"> SWEEP DECK AND OUTSIDE WALKWAY<br>
+                            <input type="checkbox"> CLEAN ROOM/td>
                     </td>
-                    <!-- Kim -->
-                    <td>
-                        <input type="checkbox" id="kim-wed-1"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
-                        <input type="checkbox" id="kim-wed-2"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
-                        <input type="checkbox" id="kim-wed-3"> CLEAN ROOM
-                    </td>
-                    <!-- Khloe -->
-                    <td>
-                        <input type="checkbox" id="khloe-wed-1"> DISHES<br>
-                        <input type="checkbox" id="khloe-wed-2"> CLEAN DINING TABLE<br>
-                        <input type="checkbox" id="khloe-wed-3"> KITCHEN TRASH<br>
-                        <input type="checkbox" id="khloe-wed-4"> KITCHEN COUNTERTOPS<br>
-                        <input type="checkbox" id="khloe-wed-5"> CLEAN ROOM
-                    </td>
-                    <!-- Karissa -->
-                    <td>
-                        <input type="checkbox" id="karissa-wed-1"> FEED & WATER CHICKENS<br>
-                        <input type="checkbox" id="karissa-wed-2"> FEED & WATER DOGS<br>
-                        <input type="checkbox" id="karissa-wed-3"> CLEAN ROOM
-                    </td>
+                    <!--Kim-->
+                    <td><input type="checkbox"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
+                        <input type="checkbox"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
+                        <input type="checkbox"> CLEAN ROOM</td>
+                        <!--Khloe-->
+                        <td><input type="checkbox"> DISHES<br>
+                            <input type="checkbox"> CLEAN DINING TABLE<br>
+                            <input type="checkbox"> KITCHEN TRASH<br>
+                            <input type="checkbox"> KITCHEN COUNTERTOPS<br>
+                            <input type="checkbox"> CLEAN ROOM</td>
+                        <!--Karissa-->
+                    <td><input type="checkbox"> FEED & WATER CHICKENS<br>
+                        <input type="checkbox"> FEED & WATER DOGS<br>
+                        <input type="checkbox"> CLEAN ROOM</td>
                 </tr>
                 <!-- Thursday -->
                 <tr>
                     <td>Thursday</td>
                     <td>
-                        <!-- Keira -->
-                        <input type="checkbox" id="keira-thu-1"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
-                        <input type="checkbox" id="keira-thu-2"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
-                        <input type="checkbox" id="keira-thu-3"> CLEAN ROOM
+                        <!--Keira-->
+                        <input type="checkbox"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
+                        <input type="checkbox"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
+                        <input type="checkbox"> CLEAN ROOM
                     </td>
-                    <!-- Kim -->
-                    <td>
-                        <input type="checkbox" id="kim-thu-1"> DISHES<br>
-                        <input type="checkbox" id="kim-thu-2"> CLEAN DINING TABLE<br>
-                        <input type="checkbox" id="kim-thu-3"> KITCHEN TRASH<br>
-                        <input type="checkbox" id="kim-thu-4"> KITCHEN COUNTERTOPS<br>
-                        <input type="checkbox" id="kim-thu-5"> CLEAN ROOM
-                    </td>
-                    <!-- Khloe -->
-                    <td>
-                        <input type="checkbox" id="khloe-thu-1"> CLEAN BATHROOM<br>
-                        <input type="checkbox" id="khloe-thu-2"> DUST HOUSE<br>
-                        <input type="checkbox" id="khloe-thu-3"> SWEEP DECK AND OUTSIDE WALKWAY<br>
-                        <input type="checkbox" id="khloe-thu-4"> CLEAN ROOM
-                    </td>
-                    <!-- Karissa -->
-                    <td>
-                        <input type="checkbox" id="karissa-thu-1"> FEED & WATER CHICKENS<br>
-                        <input type="checkbox" id="karissa-thu-2"> FEED & WATER DOGS<br>
-                        <input type="checkbox" id="karissa-thu-3"> CLEAN ROOM
-                    </td>
+                    <!--Kim-->
+                    <td><input type="checkbox"> DISHES<br>
+                        <input type="checkbox"> CLEAN DINING TABLE<br>
+                        <input type="checkbox"> KITCHEN TRASH<br>
+                        <input type="checkbox"> KITCHEN COUNTERTOPS<br>
+                        <input type="checkbox"> CLEAN ROOM</td>
+                        <!--Khloe-->
+                    <td><input type="checkbox"> CLEAN BATHROOM<br>
+                        <input type="checkbox"> DUST HOUSE<br>
+                        <input type="checkbox"> SWEEP DECK AND OUTSIDE WALKWAY<br>
+                        <input type="checkbox"> CLEAN ROOM</td>
+                        <!--Karissa-->
+                        <td><input type="checkbox"> FEED & WATER CHICKENS<br>
+                            <input type="checkbox"> FEED & WATER DOGS<br>
+                            <input type="checkbox"> CLEAN ROOM</td>
                 </tr>
                 <!-- Friday -->
                 <tr>
                     <td>Friday</td>
                     <td>
-                        <!-- Keira -->
-                        <input type="checkbox" id="keira-fri-1"> DISHES<br>
-                        <input type="checkbox" id="keira-fri-2"> CLEAN DINING TABLE<br>
-                        <input type="checkbox" id="keira-fri-3"> KITCHEN TRASH<br>
-                        <input type="checkbox" id="keira-fri-4"> KITCHEN COUNTERTOPS<br>
-                        <input type="checkbox" id="keira-fri-5"> CLEAN ROOM
+                        <!--Keira-->
+                        <input type="checkbox"> DISHES<br>
+                        <input type="checkbox"> CLEAN DINING TABLE<br>
+                        <input type="checkbox"> KITCHEN TRASH<br>
+                        <input type="checkbox"> KITCHEN COUNTERTOPS<br>
+                        <input type="checkbox"> CLEAN ROOM
                     </td>
-                    <!-- Kim -->
-                    <td>
-                        <input type="checkbox" id="kim-fri-1"> CLEAN BATHROOM<br>
-                        <input type="checkbox" id="kim-fri-2"> DUST HOUSE<br>
-                        <input type="checkbox" id="kim-fri-3"> SWEEP DECK AND OUTSIDE WALKWAY<br>
-                        <input type="checkbox" id="kim-fri-4"> CLEAN ROOM
-                    </td>
-                    <!-- Khloe -->
-                    <td>
-                        <input type="checkbox" id="khloe-fri-1"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
-                        <input type="checkbox" id="khloe-fri-2"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
-                        <input type="checkbox" id="khloe-fri-3"> CLEAN ROOM
-                    </td>
-                    <!-- Karissa -->
-                    <td>
-                        <input type="checkbox" id="karissa-fri-1"> FEED & WATER CHICKENS<br>
-                        <input type="checkbox" id="karissa-fri-2"> FEED & WATER DOGS<br>
-                        <input type="checkbox" id="karissa-fri-3"> CLEAN ROOM
-                    </td>
+                    <!--Kim-->
+                    <td><input type="checkbox"> CLEAN BATHROOM<br>
+                        <input type="checkbox"> DUST HOUSE<br>
+                        <input type="checkbox"> SWEEP DECK AND OUTSIDE WALKWAY<br>
+                        <input type="checkbox"> CLEAN ROOM</td>
+                        <!--Khloe-->
+                    <td><input type="checkbox"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
+                            <input type="checkbox"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
+                            <input type="checkbox"> CLEAN ROOM</td>
+                        <!--Karissa-->
+                    <td><input type="checkbox"> FEED & WATER CHICKENS<br>
+                        <input type="checkbox"> FEED & WATER DOGS<br>
+                        <input type="checkbox"> CLEAN ROOM</td>
+                    </tr>
+               
+            </tbody>
+        </table>
+    </div>
+    <h1>Week 2</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Kim</th>
+                <th>Khloe</th>
+                <th>Keira</th>
+                <th>Karissa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Monday -->
+            <tr>
+                <td>Monday</td>
+                <td>
+                    <!--Kim-->
+                    <input type="checkbox"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
+                    <input type="checkbox"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
+                    <input type="checkbox"> CLEAN ROOM
+                </td>
+                <!--Khloe-->
+                <td><input type="checkbox"> DISHES<br>
+                    <input type="checkbox"> CLEAN DINING TABLE<br>
+                    <input type="checkbox"> KITCHEN TRASH<br>
+                    <input type="checkbox"> KITCHEN COUNTERTOPS<br>
+                    <input type="checkbox"> CLEAN ROOM</td>
+                    <!--Keira-->
+                <td><input type="checkbox"> CLEAN BATHROOM<br>
+                    <input type="checkbox"> DUST HOUSE<br>
+                    <input type="checkbox"> SWEEP DECK AND OUTSIDE WALKWAY<br>
+                    <input type="checkbox"> CLEAN ROOM</td>
+                    <!--Karissa-->
+                <td><input type="checkbox"> FEED & WATER CHICKENS<br>
+                    <input type="checkbox"> FEED & WATER DOGS<br>
+                    <input type="checkbox"> CLEAN ROOM</td>
+            </tr>
+            <!-- Additional rows for Tuesday to Friday -->
+              <!-- Tuesday -->
+            <tr>
+                <td>Tuesday</td>
+                <td>
+                    <!--Kim-->
+                    <input type="checkbox"> DISHES<br>
+                        <input type="checkbox"> CLEAN DINING TABLE<br>
+                        <input type="checkbox"> KITCHEN TRASH<br>
+                        <input type="checkbox"> KITCHEN COUNTERTOPS<br>
+                        <input type="checkbox"> CLEAN ROOM</td>
+                </td>
+                <!--Khloe-->
+                <td><input type="checkbox"> CLEAN BATHROOM<br>
+                    <input type="checkbox"> DUST HOUSE<br>
+                    <input type="checkbox"> SWEEP DECK AND OUTSIDE WALKWAY<br>
+                    <input type="checkbox"> CLEAN ROOM</td>
+                    <!--Keira-->
+                <td><input type="checkbox"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
+                    <input type="checkbox"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
+                    <input type="checkbox"> CLEAN ROOM
+                    <!--Karissa-->
+                <td><input type="checkbox"> FEED & WATER CHICKENS<br>
+                    <input type="checkbox"> FEED & WATER DOGS<br>
+                    <input type="checkbox"> CLEAN ROOM</td>
+            </tr>
+            <!-- Wednesday-->
+            <tr>
+                <td>Wednesday</td>
+                <td>
+                    <!--Kim-->
+                    <input type="checkbox"> CLEAN BATHROOM<br>
+                        <input type="checkbox"> DUST HOUSE<br>
+                        <input type="checkbox"> SWEEP DECK AND OUTSIDE WALKWAY<br>
+                        <input type="checkbox"> CLEAN ROOM/td>
+                </td>
+                <!--Khloe-->
+                <td><input type="checkbox"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
+                    <input type="checkbox"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
+                    <input type="checkbox"> CLEAN ROOM</td>
+                    <!--Keira-->
+                    <td><input type="checkbox"> DISHES<br>
+                        <input type="checkbox"> CLEAN DINING TABLE<br>
+                        <input type="checkbox"> KITCHEN TRASH<br>
+                        <input type="checkbox"> KITCHEN COUNTERTOPS<br>
+                        <input type="checkbox"> CLEAN ROOM</td>
+                    <!--Karissa-->
+                <td><input type="checkbox"> FEED & WATER CHICKENS<br>
+                    <input type="checkbox"> FEED & WATER DOGS<br>
+                    <input type="checkbox"> CLEAN ROOM</td>
+            </tr>
+            <!-- Thursday -->
+            <tr>
+                <td>Thursday</td>
+                <td>
+                    <!--Kim-->
+                    <input type="checkbox"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
+                    <input type="checkbox"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
+                    <input type="checkbox"> CLEAN ROOM
+                </td>
+                <!--Khloe-->
+                <td><input type="checkbox"> DISHES<br>
+                    <input type="checkbox"> CLEAN DINING TABLE<br>
+                    <input type="checkbox"> KITCHEN TRASH<br>
+                    <input type="checkbox"> KITCHEN COUNTERTOPS<br>
+                    <input type="checkbox"> CLEAN ROOM</td>
+                    <!--Keira-->
+                <td><input type="checkbox"> CLEAN BATHROOM<br>
+                    <input type="checkbox"> DUST HOUSE<br>
+                    <input type="checkbox"> SWEEP DECK AND OUTSIDE WALKWAY<br>
+                    <input type="checkbox"> CLEAN ROOM</td>
+                    <!--Karissa-->
+                    <td><input type="checkbox"> FEED & WATER CHICKENS<br>
+                        <input type="checkbox"> FEED & WATER DOGS<br>
+                        <input type="checkbox"> CLEAN ROOM</td>
+            </tr>
+            <!-- Friday -->
+            <tr>
+                <td>Friday</td>
+                <td>
+                    <!--Kim-->
+                    <input type="checkbox"> DISHES<br>
+                    <input type="checkbox"> CLEAN DINING TABLE<br>
+                    <input type="checkbox"> KITCHEN TRASH<br>
+                    <input type="checkbox"> KITCHEN COUNTERTOPS<br>
+                    <input type="checkbox"> CLEAN ROOM
+                </td>
+                <!--Khloe-->
+                <td><input type="checkbox"> CLEAN BATHROOM<br>
+                    <input type="checkbox"> DUST HOUSE<br>
+                    <input type="checkbox"> SWEEP DECK AND OUTSIDE WALKWAY<br>
+                    <input type="checkbox"> CLEAN ROOM</td>
+                    <!--Keira-->
+                <td><input type="checkbox"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
+                        <input type="checkbox"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
+                        <input type="checkbox"> CLEAN ROOM</td>
+                    <!--Karissa-->
+                <td><input type="checkbox"> FEED & WATER CHICKENS<br>
+                    <input type="checkbox"> FEED & WATER DOGS<br>
+                    <input type="checkbox"> CLEAN ROOM</td>
                 </tr>
             </tbody>
         </table>
-        <!-- Repeat structure for Week 2 and Week 3 -->
     </div>
+                <h1>Week 3</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Khloe</th>
+                            <th>Keira</th>
+                            <th>Kim</th>
+                            <th>Karissa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Monday -->
+                        <tr>
+                            <td>Monday</td>
+                            <td>
+                                <!--Khloe-->
+                                <input type="checkbox"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
+                                <input type="checkbox"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
+                                <input type="checkbox"> CLEAN ROOM
+                            </td>
+                            <!--Keira-->
+                            <td><input type="checkbox"> DISHES<br>
+                                <input type="checkbox"> CLEAN DINING TABLE<br>
+                                <input type="checkbox"> KITCHEN TRASH<br>
+                                <input type="checkbox"> KITCHEN COUNTERTOPS<br>
+                                <input type="checkbox"> CLEAN ROOM</td>
+                                <!--Kim-->
+                            <td><input type="checkbox"> CLEAN BATHROOM<br>
+                                <input type="checkbox"> DUST HOUSE<br>
+                                <input type="checkbox"> SWEEP DECK AND OUTSIDE WALKWAY<br>
+                                <input type="checkbox"> CLEAN ROOM</td>
+                                <!--Karissa-->
+                            <td><input type="checkbox"> FEED & WATER CHICKENS<br>
+                                <input type="checkbox"> FEED & WATER DOGS<br>
+                                <input type="checkbox"> CLEAN ROOM</td>
+                        </tr>
+                        <!-- Additional rows for Tuesday to Friday -->
+                          <!-- Tuesday -->
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>
+                                <!--Khloe-->
+                                <input type="checkbox"> DISHES<br>
+                                    <input type="checkbox"> CLEAN DINING TABLE<br>
+                                    <input type="checkbox"> KITCHEN TRASH<br>
+                                    <input type="checkbox"> KITCHEN COUNTERTOPS<br>
+                                    <input type="checkbox"> CLEAN ROOM</td>
+                            </td>
+                            <!--Keira-->
+                            <td><input type="checkbox"> CLEAN BATHROOM<br>
+                                <input type="checkbox"> DUST HOUSE<br>
+                                <input type="checkbox"> SWEEP DECK AND OUTSIDE WALKWAY<br>
+                                <input type="checkbox"> CLEAN ROOM</td>
+                                <!--Kim-->
+                            <td><input type="checkbox"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
+                                <input type="checkbox"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
+                                <input type="checkbox"> CLEAN ROOM
+                                <!--Karissa-->
+                            <td><input type="checkbox"> FEED & WATER CHICKENS<br>
+                                <input type="checkbox"> FEED & WATER DOGS<br>
+                                <input type="checkbox"> CLEAN ROOM</td>
+                        </tr>
+                        <!-- Wednesday-->
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>
+                                <!--Khloe-->
+                                <input type="checkbox"> CLEAN BATHROOM<br>
+                                    <input type="checkbox"> DUST HOUSE<br>
+                                    <input type="checkbox"> SWEEP DECK AND OUTSIDE WALKWAY<br>
+                                    <input type="checkbox"> CLEAN ROOM/td>
+                            </td>
+                            <!--Keira-->
+                            <td><input type="checkbox"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
+                                <input type="checkbox"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
+                                <input type="checkbox"> CLEAN ROOM</td>
+                                <!--Kim-->
+                                <td><input type="checkbox"> DISHES<br>
+                                    <input type="checkbox"> CLEAN DINING TABLE<br>
+                                    <input type="checkbox"> KITCHEN TRASH<br>
+                                    <input type="checkbox"> KITCHEN COUNTERTOPS<br>
+                                    <input type="checkbox"> CLEAN ROOM</td>
+                                <!--Karissa-->
+                            <td><input type="checkbox"> FEED & WATER CHICKENS<br>
+                                <input type="checkbox"> FEED & WATER DOGS<br>
+                                <input type="checkbox"> CLEAN ROOM</td>
+                        </tr>
+                        <!-- Thursday -->
+                        <tr>
+                            <td>Thursday</td>
+                            <td>
+                                <!--Khloe-->
+                                <input type="checkbox"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
+                                <input type="checkbox"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
+                                <input type="checkbox"> CLEAN ROOM
+                            </td>
+                            <!--Keira-->
+                            <td><input type="checkbox"> DISHES<br>
+                                <input type="checkbox"> CLEAN DINING TABLE<br>
+                                <input type="checkbox"> KITCHEN TRASH<br>
+                                <input type="checkbox"> KITCHEN COUNTERTOPS<br>
+                                <input type="checkbox"> CLEAN ROOM</td>
+                                <!--Kim-->
+                            <td><input type="checkbox"> CLEAN BATHROOM<br>
+                                <input type="checkbox"> DUST HOUSE<br>
+                                <input type="checkbox"> SWEEP DECK AND OUTSIDE WALKWAY<br>
+                                <input type="checkbox"> CLEAN ROOM</td>
+                                <!--Karissa-->
+                                <td><input type="checkbox"> FEED & WATER CHICKENS<br>
+                                    <input type="checkbox"> FEED & WATER DOGS<br>
+                                    <input type="checkbox"> CLEAN ROOM</td>
+                        </tr>
+                        <!-- Friday -->
+                        <tr>
+                            <td>Friday</td>
+                            <td>
+                                <!--Khloe-->
+                                <input type="checkbox"> DISHES<br>
+                                <input type="checkbox"> CLEAN DINING TABLE<br>
+                                <input type="checkbox"> KITCHEN TRASH<br>
+                                <input type="checkbox"> KITCHEN COUNTERTOPS<br>
+                                <input type="checkbox"> CLEAN ROOM
+                            </td>
+                            <!--Keira-->
+                            <td><input type="checkbox"> CLEAN BATHROOM<br>
+                                <input type="checkbox"> DUST HOUSE<br>
+                                <input type="checkbox"> SWEEP DECK AND OUTSIDE WALKWAY<br>
+                                <input type="checkbox"> CLEAN ROOM</td>
+                                <!--Kim-->
+                            <td><input type="checkbox"> VACUUM ALL CARPETED AREAS & EMPTY VACUUM<br>
+                                    <input type="checkbox"> SWEEP & MOP ALL INDOORS INCLUDING BATHROOM<br>
+                                    <input type="checkbox"> CLEAN ROOM</td>
+                                <!--Karissa-->
+                            <td><input type="checkbox"> FEED & WATER CHICKENS<br>
+                                <input type="checkbox"> FEED & WATER DOGS<br>
+                                <input type="checkbox"> CLEAN ROOM</td>
+                            </tr>
 </body>
 </html>
-
