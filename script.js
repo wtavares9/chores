@@ -1,19 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Disable text input or any edits in the checkboxes' parent td elements
-    let tds = document.querySelectorAll('td');
-    tds.forEach(td => {
-        td.contentEditable = false;
+document.addEventListener("DOMContentLoaded", function () {
+  // Function to save checkbox state
+  function saveCheckboxState() {
+    const checkboxes = document.querySelectorAll("input[type='checkbox']");
+    checkboxes.forEach(function (checkbox) {
+      checkbox.addEventListener("change", function () {
+        localStorage.setItem(checkbox.id, checkbox.checked);
+      });
     });
+  }
 
-    // Add event listeners to each checkbox to save its state to local storage
-    let checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(checkbox => {
-        // Load the saved state
-        checkbox.checked = localStorage.getItem(checkbox.parentNode.textContent.trim()) === 'true';
-
-        // Save the state on click
-        checkbox.addEventListener('change', function() {
-            localStorage.setItem(checkbox.parentNode.textContent.trim(), checkbox.checked);
-        });
+  // Function to load checkbox state
+  function loadCheckboxState() {
+    const checkboxes = document.querySelectorAll("input[type='checkbox']");
+    checkboxes.forEach(function (checkbox) {
+      const savedState = localStorage.getItem(checkbox.id);
+      if (savedState !== null) {
+        checkbox.checked = JSON.parse(savedState);
+      }
     });
+  }
+
+  // Call the functions to load the state and save it when changed
+  loadCheckboxState();
+  saveCheckboxState();
 });
