@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chore List</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .karissa-column {
+            background-color: #ffcccb; /* Changed to light pink; doesn't work */
+        }
+    </style>
+</head>
+<body>
+    <h1>Chore List</h1>
+    <h2>Week 1</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Keira</th>
+                <th>Kimberly</th>
+                <th>Khloe</th>
+                <th class="karissa-column">Karissa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>
+                    <input type="checkbox"> Vacuum all carpeted areas<br>
+                    <input type="checkbox"> Empty vacuum<br>
+                    <input type="checkbox"> Sweep & mop all indoors including bathroom<br>
+                    <input type="checkbox"> Clean room
+                </td>
+                <td><input type="checkbox"> Chore 1</td>
+                <td><input type="checkbox"> Chore 1</td>
+                <td class="karissa-column">
+                    <input type="checkbox"> Feed the dogs<br>
+                    <input type="checkbox"> Sweep the deck
+                </td>
+            </tr>
+            <!-- Repeat similar structure for other days and weeks -->
+        </tbody>
+    </table>
+
+    <h2>Week 2</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Keira</th>
+                <th>Kimberly</th>
+                <th>Khloe</th>
+                <th class="karissa-column">Karissa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>
+                    <input type="checkbox"> Vacuum all carpeted areas<br>
+                    <input type="checkbox"> Empty vacuum<br>
+                    <input type="checkbox"> Sweep & mop all indoors including bathroom<br>
+                    <input type="checkbox"> Clean room
+                </td>
+                <td><input type="checkbox"> Chore 1</td>
+                <td><input type="checkbox"> Chore 1</td>
+                <td class="karissa-column">
+                    <input type="checkbox"> Feed the dogs<br>
+                    <input type="checkbox"> Sweep the deck
+                </td>
+            </tr>
+            <!-- Repeat similar structure for other days and weeks -->
+        </tbody>
+    </table>
+
+    <h2>Week 3</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Keira</th>
+                <th>Kimberly</th>
+                <th>Khloe</th>
+                <th class="karissa-column">Karissa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>
+                    <input type="checkbox"> Vacuum all carpeted areas<br>
+                    <input type="checkbox"> Empty vacuum<br>
+                    <input type="checkbox"> Sweep & mop all indoors including bathroom<br>
+                    <input type="checkbox"> Clean room
+                </td>
+                <td><input type="checkbox"> Chore 1</td>
+                <td><input type="checkbox"> Chore 1</td>
+                <td class="karissa-column">
+                    <input type="checkbox"> Feed the dogs<br>
+                    <input type="checkbox"> Sweep the deck
+                </td>
+            </tr>
+            <!-- Repeat similar structure for other days and weeks -->
+        </tbody>
+    </table>
+</body>
+</html>
+
