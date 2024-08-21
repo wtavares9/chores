@@ -4,10 +4,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Load saved states from localStorage and apply them
     checkboxes.forEach(checkbox => {
         const savedState = localStorage.getItem(checkbox.id);
-        
-        if (savedState) {
-            checkbox.checked = savedState === 'true';
-        }
+
+        // Convert savedState to boolean for comparison
+        checkbox.checked = savedState === 'true';
 
         // Apply styles based on the checkbox state
         if (checkbox.checked) {
@@ -20,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Add event listener to save state and apply styles
         checkbox.addEventListener('change', function () {
-            localStorage.setItem(checkbox.id, checkbox.checked);
+            localStorage.setItem(checkbox.id, checkbox.checked.toString()); // Save state as string
             if (this.checked) {
                 this.parentNode.style.color = '#aaa';
                 this.parentNode.style.textDecoration = 'line-through';
